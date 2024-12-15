@@ -1,0 +1,20 @@
+import { View, Text } from "react-native";
+import { colors } from "@/styles/theme";
+import { s } from "./styles";
+import { IconTicket } from "@tabler/icons-react-native";
+
+type CouponProps = {
+  code: string
+}
+export function Coupon({ code }: CouponProps) {
+  return (
+    <View style={s.container}>
+    <Text style={s.title}>Utilize esse cupom</Text>
+
+    <View style={s.content}>
+      <IconTicket size={24} color={colors.green.light} />
+      <Text style={s.code}>{code}</Text>
+    </View>
+  </View>
+  )
+}
